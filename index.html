@@ -12,8 +12,72 @@
         <div class="top"></div>
         <div class="bottom"></div>
         <div class="main">
-            <div class="left"></div>
-            <div class="right"></div>
+            <div class="left">
+                <div class="myUser">
+                    <div class="info">
+                        <div class="photo">
+
+                        </div>
+                        <div class="name">
+                            NAME LASTNAME
+                        </div>
+                    </div>
+                    <div class="icons">
+                        <i>1</i>
+                        <i>2</i>
+                        <i>3</i>
+                    </div>
+                </div>
+                <div class="contacts">
+                    <div class="searchContacts">
+                        <button class="lens">L</button>
+                        <input class="inputContact" type="text" placeholder="Cerca contatti">
+                    </div>
+                    <div class="inserisciContatti">
+                        <div v-for="(elemento, indice) in contacts" class="persona">
+                            <div class="info">
+                                <div class="photo">
+    
+                                </div>
+                                <div class="name">
+                                    {{elemento.name}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="user">
+                    <div class="info">
+                        <div class="photo">
+
+                        </div>
+                        <div class="read">
+                            <div class="name">
+                                NAME LASTNAME
+                            </div>
+                            <div class="access">
+                                ieri
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="icons">
+                        <i>1</i>
+                        <i>2</i>
+                        <i>3</i>
+                    </div>
+                </div>
+                <div class="chat">
+
+                </div>
+                <div class="input">
+                    <button class="emoji">L</button>
+                    <input class="inputText" type="text" placeholder="Scrivi un messaggio...">
+                    <button class="mic">L</button>
+                </div>
+            </div>
         </div>
     </div>
     

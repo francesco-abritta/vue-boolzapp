@@ -24,7 +24,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%;
+    width: 85%;
     height: 90vh;
     display: flex;
 }
@@ -32,13 +32,116 @@
 .left{
     height: 90vh;
     width: 30%;
-    background-color: black;
+    /* background-color: black; */
     display: inline-block;
+    border-right: 1px solid black;
 }
 
 .right{
     height: 90vh;
     width: 70%;
-    background-color: blanchedalmond;
+    /* background-color: blanchedalmond; */
     display: inline-block;
 }
+
+.myUser{
+    height: 70px;
+    background-color: rgb(230, 227, 227);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.info, .icons{
+    display: flex;
+    align-items: center;
+}
+
+.photo{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    background-color: blue;
+}
+
+.name{
+    margin-left: 5px;
+}
+
+.persona{
+    padding: 10px;
+}
+
+
+.contacts{
+    height: calc(90vh - 70px);
+    background-color: white;
+}
+
+.searchContacts{
+    display: flex;
+    padding: 10px;
+}
+
+.inputContact{
+    width: 90%;
+    height: 30px;
+    border: 0;
+    padding: 5px;
+}
+
+.lens{
+    width: 10%;
+    height: 30px;
+    border: 0;
+    background-color: transparent;
+}
+
+.user{
+    height: 70px;
+    background-color: rgb(230, 227, 227);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.read{
+    display: flex;
+    flex-direction: column;
+}
+
+.access{
+    margin-left: 5px;
+    font-size: 15px;
+    color: grey;
+}
+
+.chat{
+    height: calc(90vh - 120px);
+    background-color: rgb(185, 181, 181);
+}
+
+.input{
+    height: 50px;
+    background-color: rgb(230, 227, 227);
+    padding: 10px;
+    display: flex;
+}
+
+.emoji, .mic{
+    width: 5%;
+    height: 30px;
+    border: 0;
+    background-color: transparent;
+}
+
+.inputText{
+    width: 95%;
+    height: 30px;
+    border: 0;
+    padding: 10px;
+    border-radius: 15px;
+}
+
