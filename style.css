@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#app{
+    height: 100vh;
+    position: relative;
+}
+
+.top{
+    background-color: #01BFA5;
+    height: 20vh;
+}
+
+.bottom{
+    background-color: rgb(179, 178, 178);
+    height: 80vh;
+}
+
+.main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 90vh;
+    display: flex;
+}
+
+.left{
+    height: 90vh;
+    width: 30%;
+    background-color: black;
+    display: inline-block;
+}
+
+.right{
+    height: 90vh;
+    width: 70%;
+    background-color: blanchedalmond;
+    display: inline-block;
+}
