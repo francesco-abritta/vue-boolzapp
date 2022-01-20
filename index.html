@@ -58,28 +58,41 @@
             </div>
             <div class="right">
                 <div class="user">
-                    <div class="info">
+                    <div v-if="clicker > 0" class="info">
                         <div class="photo">
 
                         </div>
                         <div class="read">
                             <div class="name">
-                                NAME LASTNAME
+                                
                             </div>
                             <div class="access">
-                                ieri
+                                ultimo accesso: 
                             </div>
                         </div>
                         
                     </div>
-                    <div class="icons">
+                    <div v-if="clicker > 0" class="icons">
                         <i class="fas fa-search"></i>
                         <i class="fas fa-paperclip"></i>
                         <i class="fas fa-ellipsis-v"></i>
                     </div>
                 </div>
                 <div class="chat">
-                                    
+                    <div v-if="clicker > 0" class="sent">
+                        <div class="messageSent">
+                            <div></div>
+                            <div class="time"></div>
+                        </div>
+                    </div>
+                    
+                    <div v-if="clicker > 0" class="received">
+                        <div class="messageReceived">
+                            <div></div>
+                            <div class="time"></div>
+                        </div>
+                    </div>
+                                  
                 </div>
                 <div class="input">
                     <button class="emoji"><i class="far fa-laugh"></i></button>

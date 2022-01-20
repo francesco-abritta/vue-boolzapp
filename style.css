@@ -12,12 +12,12 @@
 
 .top{
     background-color: #01BFA5;
-    height: 20vh;
+    height: 122px;
 }
 
 .bottom{
     background-color: rgb(179, 178, 178);
-    height: 80vh;
+    height: calc(100vh - 122px);
 }
 
 .main{
@@ -94,6 +94,7 @@
 
 .persona{
     padding: 10px;
+    border-bottom: 1px solid rgb(204, 203, 203);
 }
 
 .persona:hover{
@@ -102,9 +103,16 @@
 }
 
 
+
+
 .contacts{
     height: calc(90vh - 70px);
     background-color: white;
+    overflow: scroll;
+}
+
+.contacts::-webkit-scrollbar {
+    display: none;
 }
 
 .searchContacts{
@@ -119,6 +127,7 @@
     border-radius: 10px;
     padding: 5px;
 }
+
 
 .lens{
     width: 10%;
@@ -142,11 +151,13 @@
 .emoji i{
     margin-right: 5px;
     margin-bottom: 10px;
+    opacity: 0.5;
 }
 
 .mic i{
     margin-left: 5px;
     padding: 5px 8px;
+    opacity: 0.5;
 }
 
 .emoji i:hover, .mic i:hover{
@@ -171,7 +182,8 @@
 
 .access{
     margin-left: 5px;
-    font-size: 15px;
+    margin-top: 5px;
+    font-size: 12px;
     color: grey;
 }
 
@@ -179,14 +191,47 @@
     height: calc(90vh - 130px);
     background-image: url('img/sfondo.png');
     overflow: scroll;
-    padding: 30px;
+    padding: 30px 50px 0px 50px;
 }
 
 .chat::-webkit-scrollbar {
     display: none;
 }
 
+.sent, .received{
+    min-height: 40px;
+    display: flex;
+    margin-bottom: 10px;
+}
 
+.sent{
+    justify-content: end;
+}
+
+.received{
+    justify-content: start;
+}
+
+.messageSent{
+    background-color: rgb(209, 252, 144);
+}
+
+.messageReceived{
+    background-color: white;
+}
+
+.messageReceived, .messageSent{
+    padding: 10px 15px;
+    min-width: 100px;
+    max-width: 500px;
+    border-radius: 15px;
+}
+
+.time{
+    font-size: 10px;
+    color: grey;
+    text-align: end;
+}
 
 
 
@@ -202,6 +247,11 @@
     margin-left: 5px;
     font-size: 13px;
     color: grey;
+    max-width: 190px;
+    max-height: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .input{
