@@ -38,10 +38,10 @@
                         <input class="inputContact" type="text" placeholder="Cerca contatti">
                     </div>
                     <div class="inserisciContatti">
-                        <div v-for="(user, indice) in contacts" class="persona">
+                        <div @click="selezionaChat(indice)" v-for="(user, indice) in contacts" class="persona">
                             <div class="info">
                                 <div class="photo">
-                                    <img :src='"img/avatar"+contacts[indice].avatar+".png"' alt="">
+                                    <img :src='"img/avatar"+user.avatar+".png"' alt="">
                                 </div>
                                 <div class="spec">
                                     <div class="name">
@@ -61,14 +61,14 @@
                 <div class="user">
                     <div v-if="contattoAttivo > 0" class="info">
                         <div class="photo">
-
+                            <img :src="'img/avatar'+contacts[chat].avatar+'.png'" alt="">
                         </div>
                         <div class="read">
                             <div class="name">
-                                
+                                {{contacts[chat].name}}
                             </div>
                             <div class="access">
-                                ultimo accesso: 
+                                ultimo accesso: {{contacts[chat].messages[contacts[chat].messages.length-1].date}}
                             </div>
                         </div>
                         
@@ -80,25 +80,18 @@
                     </div>
                 </div>
                 <div class="chat">
-                    <div v-for="(messaggio, index) in contacts[0].messages" v-if="contattoAttivo > 0" :class="messaggio.status">
-                        <div :class="'message'+contacts[index].messages[0].status">
+                    <div v-for="(messaggio, index) in contacts[chat].messages" v-if="contattoAttivo > 0" :class="messaggio.status">
+                        <div :class="'message'+messaggio.status">
                             <div>{{messaggio.text}}</div>
                             <div class="time">{{messaggio.date}}</div>
                         </div>
                     </div>
                     <p v-else>Comincia una conversazione...</p>
-                    
-                    <!-- <div v-if="contattoAttivo > 0" class="received">
-                        <div class="messageReceived">
-                            <div></div>
-                            <div class="time"></div>
-                        </div>
-                    </div> -->
                                   
                 </div>
                 <div class="input">
                     <button class="emoji"><i class="far fa-laugh"></i></button>
-                    <input class="inputText" type="text" placeholder="Scrivi un messaggio...">
+                    <input v-model="messInput" @keyup.enter="aggiungi(chat)" class="inputText" type="text" placeholder="Scrivi un messaggio...">
                     <button class="mic"><i class="fas fa-microphone"></i></button>
                 </div>
             </div>

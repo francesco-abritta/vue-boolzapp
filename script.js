@@ -1,7 +1,9 @@
 let app = new Vue({
     el: "#app",
     data: {
-        contattoAttivo: 1,
+        contattoAttivo: 0,
+        chat: 0,
+        messInput:"",
         contacts: [
             {
                 name: 'Michele',
@@ -89,7 +91,22 @@ let app = new Vue({
         ]
     },
     methods: {
+        selezionaChat: function(indice){
+            this.chat=indice;
+            this.contattoAttivo++;
+        },
         
+        aggiungi: function(chat){
+            let newMess =
+            {
+                date: '10/01/2020 15:4440:00',
+                text: this.messInput,
+                status: 'sent'
+            };
+            this.contacts[chat].messages.push(newMess);
+            this.messInput="";
+        }
+
         
     }
 });
