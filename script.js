@@ -99,15 +99,43 @@ let app = new Vue({
         aggiungi: function(chat){
             let newMess =
             {
-                date: '10/01/2020 15:4440:00',
+                date: '10/01/2022 15:40:00',
                 text: this.messInput,
                 status: 'sent'
             };
             this.contacts[chat].messages.push(newMess);
             this.messInput="";
-        }
 
-        
+            let app=this.contacts[this.chat];
+            setTimeout(function(){
+                let newMessRec =
+                {
+                    date: '10/01/2022 15:40:00',
+                    text: 'ok',
+                    status: 'received'
+                };
+                app.messages.push(newMessRec);
+            },1000)
+        },
+
+        // risposta(){
+        //     let risp=setInterval(function(){
+        //         let cont=0;
+        //         let newMessRec =
+        //         {
+        //             date: '10/01/2020 15:4440:00',
+        //             text: 'ciao',
+        //             status: 'received'
+        //         };
+        //         this.contacts[].messages.push(newMessRec);
+        //         cont=1;
+        //         if(cont=1){
+        //             clearInterval(risp);
+        //         }
+        //     }
+        //     ,1000);
+        // }
+
     }
 });
 

@@ -90,15 +90,16 @@
                                   
                 </div>
                 <div class="input">
-                    <button class="emoji"><i class="far fa-laugh"></i></button>
-                    <input v-model="messInput" @keyup.enter="aggiungi(chat)" class="inputText" type="text" placeholder="Scrivi un messaggio...">
-                    <button class="mic"><i class="fas fa-microphone"></i></button>
+                    <button v-if="contattoAttivo > 0" class="emoji"><i class="far fa-laugh"></i></button>
+                    <input v-if="contattoAttivo > 0" v-model="messInput" @keyup.enter="aggiungi(chat)" class="inputText" type="text" placeholder="Scrivi un messaggio...">
+                    <button v-if="contattoAttivo > 0" class="mic"><i class="fas fa-microphone"></i></button>
                 </div>
             </div>
         </div>
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

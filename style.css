@@ -80,6 +80,7 @@
 .icons i:hover, .lens i:hover{
     background-color: rgb(216, 213, 213);
     cursor: pointer;
+    opacity: 1;
 }
 
 
@@ -194,7 +195,7 @@
 }
 
 .messagesent{
-    background-color: rgb(209, 252, 144);
+    background-color: rgb(213, 243, 168);
 }
 
 .messagereceived{
@@ -286,6 +287,7 @@ p{
 .emoji i:hover, .mic i:hover{
     background-color: rgb(199, 196, 196);
     cursor: pointer;
+    opacity: 1;
 }
 
 .inputText{
