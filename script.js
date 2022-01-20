@@ -1,7 +1,7 @@
 let app = new Vue({
     el: "#app",
     data: {
-        clicker: 0,
+        contattoAttivo: 1,
         contacts: [
             {
                 name: 'Michele',

@@ -189,15 +189,15 @@
     justify-content: start;
 }
 
-.messageSent{
+.messagesent{
     background-color: rgb(209, 252, 144);
 }
 
-.messageReceived{
+.messagereceived{
     background-color: white;
 }
 
-.messageReceived, .messageSent{
+.messagereceived, .messagesent{
     padding: 10px 15px;
     min-width: 100px;
     max-width: 500px;
@@ -279,6 +279,3 @@
     padding: 10px;
     border-radius: 15px;
 }
-
-
-

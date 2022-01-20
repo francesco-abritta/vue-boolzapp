@@ -58,7 +58,7 @@
             </div>
             <div class="right">
                 <div class="user">
-                    <div v-if="clicker > 0" class="info">
+                    <div v-if="contattoAttivo > 0" class="info">
                         <div class="photo">
 
                         </div>
@@ -72,26 +72,26 @@
                         </div>
                         
                     </div>
-                    <div v-if="clicker > 0" class="icons">
+                    <div v-if="contattoAttivo > 0" class="icons">
                         <i class="fas fa-search"></i>
                         <i class="fas fa-paperclip"></i>
                         <i class="fas fa-ellipsis-v"></i>
                     </div>
                 </div>
                 <div class="chat">
-                    <div v-if="clicker > 0" class="sent">
-                        <div class="messageSent">
-                            <div></div>
-                            <div class="time"></div>
+                    <div v-for="(messaggio, index) in contacts[0].messages" v-if="contattoAttivo > 0" :class="messaggio.status">
+                        <div :class="'message'+contacts[index].messages[0].status">
+                            <div>{{messaggio.text}}</div>
+                            <div class="time">{{messaggio.date}}</div>
                         </div>
                     </div>
                     
-                    <div v-if="clicker > 0" class="received">
+                    <!-- <div v-if="contattoAttivo > 0" class="received">
                         <div class="messageReceived">
                             <div></div>
                             <div class="time"></div>
                         </div>
-                    </div>
+                    </div> -->
                                   
                 </div>
                 <div class="input">
