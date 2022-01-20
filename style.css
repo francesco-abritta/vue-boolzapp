@@ -32,7 +32,7 @@
 
 .left{
     height: 90vh;
-    width: 30%;
+    width: 280px;
     /* background-color: black; */
     display: inline-block;
     border-right: 1px solid rgb(143, 141, 141);
@@ -40,7 +40,7 @@
 
 .right{
     height: 90vh;
-    width: 70%;
+    width: calc(100% - 250px);
     /* background-color: blanchedalmond; */
     display: inline-block;
 }
@@ -169,6 +169,7 @@
     background-image: url('img/sfondo.png');
     overflow: scroll;
     padding: 30px 50px 0px 50px;
+    position: relative;
 }
 
 .chat::-webkit-scrollbar {
@@ -177,6 +178,7 @@
 
 .sent, .received{
     min-height: 40px;
+    min-width: 500px;
     display: flex;
     margin-bottom: 10px;
 }
@@ -210,7 +212,17 @@
     text-align: end;
 }
 
+.name{
+    display: flex;
+    justify-content: space-between;
+}
 
+p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 
 
@@ -218,6 +230,7 @@
     display: flex;
     flex-direction: column;
     margin-left: 5px;
+    width: 300px;
 }
 
 .mess{

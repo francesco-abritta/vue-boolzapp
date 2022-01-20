@@ -45,7 +45,8 @@
                                 </div>
                                 <div class="spec">
                                     <div class="name">
-                                        {{user.name}}
+                                        <span>{{user.name}}</span>
+                                        <span class="time">{{user.messages[user.messages.length-1].date}}</span>
                                     </div>
                                     <div class="mess">
                                         {{user.messages[user.messages.length-1].text}}
@@ -85,6 +86,7 @@
                             <div class="time">{{messaggio.date}}</div>
                         </div>
                     </div>
+                    <p v-else>Comincia una conversazione...</p>
                     
                     <!-- <div v-if="contattoAttivo > 0" class="received">
                         <div class="messageReceived">
