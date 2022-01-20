@@ -35,7 +35,7 @@
     width: 30%;
     /* background-color: black; */
     display: inline-block;
-    border-right: 1px solid rgb(185, 185, 185);
+    border-right: 1px solid rgb(143, 141, 141);
 }
 
 .right{
@@ -63,6 +63,7 @@
 .fa-ellipsis-v{
     padding: 10px 15px !important;
 }
+
 
 .icons i, .lens i{
     opacity: 0.5;
@@ -118,6 +119,7 @@
 .searchContacts{
     display: flex;
     padding: 10px;
+    border-bottom: 1px solid rgb(179, 178, 178);
 }
 
 .inputContact{
@@ -130,7 +132,7 @@
 
 
 .lens{
-    width: 10%;
+    width: 30px;
     height: 30px;
     border: 0;
     background-color: transparent;
@@ -138,32 +140,7 @@
     margin-right: 5px;
 }
 
-.emoji, .mic{
-    border-radius: 25px;
-}
 
-.emoji i, .mic i{
-    font-size: 20px;
-    padding: 5px;
-    border-radius: 15px;
-}
-
-.emoji i{
-    margin-right: 5px;
-    margin-bottom: 10px;
-    opacity: 0.5;
-}
-
-.mic i{
-    margin-left: 5px;
-    padding: 5px 8px;
-    opacity: 0.5;
-}
-
-.emoji i:hover, .mic i:hover{
-    background-color: rgb(199, 196, 196);
-    cursor: pointer;
-}
 
 .user{
     height: 70px;
@@ -263,10 +240,36 @@
 }
 
 .emoji, .mic{
-    width: 5%;
     height: 30px;
     border: 0;
     background-color: transparent;
+    border-radius: 25px;
+    width: 60px;
+}
+
+
+
+.emoji i, .mic i{
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.emoji i{
+    margin-right: 5px;
+    margin-bottom: 10px;
+    opacity: 0.5;
+}
+
+.mic i{
+    margin-left: 5px;
+    padding: 5px 8px;
+    opacity: 0.5;
+}
+
+.emoji i:hover, .mic i:hover{
+    background-color: rgb(199, 196, 196);
+    cursor: pointer;
 }
 
 .inputText{
@@ -276,4 +279,6 @@
     padding: 10px;
     border-radius: 15px;
 }
+
+
 

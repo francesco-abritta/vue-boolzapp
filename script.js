@@ -89,10 +89,7 @@ let app = new Vue({
         ]
     },
     methods: {
-        scegliImg: function(indice){
-            let image="img/avatar"+this.contacts[indice].avatar+".png"
-            return image;
-        },
+        
         
     }
 });

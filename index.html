@@ -41,7 +41,7 @@
                         <div v-for="(user, indice) in contacts" class="persona">
                             <div class="info">
                                 <div class="photo">
-                                    <img :src="scegliImg(indice)" alt="">
+                                    <img :src='"img/avatar"+contacts[indice].avatar+".png"' alt="">
                                 </div>
                                 <div class="spec">
                                     <div class="name">
