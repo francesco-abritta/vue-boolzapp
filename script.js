@@ -4,6 +4,7 @@ let app = new Vue({
         contattoAttivo: 0,
         chat: 0,
         messInput:"",
+        filtroNome: "",
         contacts: [
             {
                 name: 'Michele',
@@ -117,9 +118,14 @@ let app = new Vue({
                 app.messages.push(newMessRec);
             },1000)
         },
-
+        filtraContatti: function(){
+            this.contacts.forEach((elemento) => {
+                elemento.visible=elemento.name.toLowerCase().includes(this.filtroNome.toLowerCase())
+            });
+        }
     }
-});
+},
+)
 
 
 

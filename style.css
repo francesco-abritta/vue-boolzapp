@@ -179,6 +179,10 @@
     display: none;
 }
 
+.nascondi{
+    display: none;
+}
+
 .sent, .received{
     min-height: 40px;
     min-width: 500px;

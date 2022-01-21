@@ -35,10 +35,10 @@
                         <button class="lens">
                             <i class="fas fa-search"></i>
                         </button>
-                        <input class="inputContact" type="text" placeholder="Cerca contatti">
+                        <input class="inputContact" type="text" placeholder="Cerca contatti" v-model="filtroNome" @keyUp="filtraContatti()">
                     </div>
                     <div class="inserisciContatti">
-                        <div @click="selezionaChat(indice)" v-for="(user, indice) in contacts" class="persona">
+                        <div @click="selezionaChat(indice)" v-for="(user, indice) in contacts" :class="{nascondi: !user.visible}" class="persona">
                             <div class="info">
                                 <div class="photo">
                                     <img :src='"img/avatar"+user.avatar+".png"' alt="">
@@ -97,6 +97,7 @@
             </div>
         </div>
     </div>
+
 
 
     <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
