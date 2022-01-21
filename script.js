@@ -93,13 +93,13 @@ let app = new Vue({
     methods: {
         selezionaChat: function(indice){
             this.chat=indice;
-            this.contattoAttivo++;
+            this.contattoAttivo=1;
         },
         
         aggiungi: function(chat){
             let newMess =
             {
-                date: '10/01/2022 15:40:00',
+                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                 text: this.messInput,
                 status: 'sent'
             };
@@ -110,31 +110,13 @@ let app = new Vue({
             setTimeout(function(){
                 let newMessRec =
                 {
-                    date: '10/01/2022 15:40:00',
+                    date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
                     text: 'ok',
                     status: 'received'
                 };
                 app.messages.push(newMessRec);
             },1000)
         },
-
-        // risposta(){
-        //     let risp=setInterval(function(){
-        //         let cont=0;
-        //         let newMessRec =
-        //         {
-        //             date: '10/01/2020 15:4440:00',
-        //             text: 'ciao',
-        //             status: 'received'
-        //         };
-        //         this.contacts[].messages.push(newMessRec);
-        //         cont=1;
-        //         if(cont=1){
-        //             clearInterval(risp);
-        //         }
-        //     }
-        //     ,1000);
-        // }
 
     }
 });
