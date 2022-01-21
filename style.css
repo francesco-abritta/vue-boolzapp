@@ -190,6 +190,11 @@
     margin-bottom: 10px;
 }
 
+.testo{
+    max-width: 400px;
+    word-break: break-word;
+}
+
 .sent{
     justify-content: end;
 }

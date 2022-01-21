@@ -91,11 +91,15 @@ let app = new Vue({
             },
         ]
     },
-    // updated: function () {
-    //     let box = document.querySelector(".content");
-    //     box.scrollTop = box.scrollHeight;
-    //   },
+    updated: function () {
+        this.scroll();
+    },
     methods: {
+        scroll: function(){
+            const blocco = document.querySelector('.chat');
+            blocco.scrollTop = blocco.scrollHeight;
+        },
+
         selezionaChat: function(indice){
             this.chat=indice;
             this.contattoAttivo=1;
@@ -111,6 +115,7 @@ let app = new Vue({
                 };
                 this.contacts[chat].messages.push(newMess);
                 this.messInput="";
+
     
                 let app=this.contacts[this.chat];
                 setTimeout(function(){
@@ -129,7 +134,8 @@ let app = new Vue({
             this.contacts.forEach((elemento) => {
                 elemento.visible=elemento.name.toLowerCase().includes(this.filtroNome.toLowerCase())
             });
-        }
+        },
+        
     }
 },
 )
