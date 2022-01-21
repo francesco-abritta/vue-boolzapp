@@ -91,6 +91,10 @@ let app = new Vue({
             },
         ]
     },
+    // updated: function () {
+    //     let box = document.querySelector(".content");
+    //     box.scrollTop = box.scrollHeight;
+    //   },
     methods: {
         selezionaChat: function(indice){
             this.chat=indice;
@@ -98,25 +102,28 @@ let app = new Vue({
         },
         
         aggiungi: function(chat){
-            let newMess =
-            {
-                date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
-                text: this.messInput,
-                status: 'sent'
-            };
-            this.contacts[chat].messages.push(newMess);
-            this.messInput="";
-
-            let app=this.contacts[this.chat];
-            setTimeout(function(){
-                let newMessRec =
+            if(this.messInput!=''){
+                let newMess =
                 {
                     date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
-                    text: 'ok',
-                    status: 'received'
+                    text: this.messInput,
+                    status: 'sent'
                 };
-                app.messages.push(newMessRec);
-            },1000)
+                this.contacts[chat].messages.push(newMess);
+                this.messInput="";
+    
+                let app=this.contacts[this.chat];
+                setTimeout(function(){
+                    let newMessRec =
+                    {
+                        date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+                        text: 'ok',
+                        status: 'received'
+                    };
+                    app.messages.push(newMessRec);
+                },1000)
+            }
+            
         },
         filtraContatti: function(){
             this.contacts.forEach((elemento) => {
