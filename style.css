@@ -183,6 +183,10 @@
     display: none;
 }
 
+.mostra{
+    display: block;
+}
+
 .sent, .received{
     min-height: 40px;
     min-width: 500px;
@@ -191,9 +195,11 @@
 }
 
 .testo{
+    min-width: 80px;
     max-width: 400px;
     word-break: break-word;
     display: inline-block;
+    margin-right: 15px;
 }
 
 .arrow{
@@ -202,11 +208,44 @@
     height: 15px;
     width: 15px;
     display: inline-block;
-    position: fixed;
+    position: absolute;
+    right: 7px;
 }
 
 .arrow i{
     display: none;
+}
+
+.tendina{
+    position: absolute;
+    width: 180px;
+    background-color: white;
+    z-index: 999;
+    font-size: 15px;
+    color: rgb(73, 73, 73);
+    border-radius: 4px;
+}
+
+.tendina ul{
+    text-decoration: none;
+    list-style: none;
+}
+
+.tendina li{
+    margin: 20px;
+    cursor: pointer;
+}
+
+.sent .tendina{
+    right: 0px;
+    bottom: -85px;
+    text-align: start;
+}
+
+.received .tendina{
+    left: 0px;
+    bottom: -85px;
+    text-align: start;
 }
 
 .sent{

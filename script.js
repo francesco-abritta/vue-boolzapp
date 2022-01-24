@@ -5,6 +5,7 @@ let app = new Vue({
         chat: 0,
         messInput:"",
         filtroNome: "",
+        mostra: true,
         contacts: [
             {
                 name: 'Michele',
@@ -135,6 +136,9 @@ let app = new Vue({
                 elemento.visible=elemento.name.toLowerCase().includes(this.filtroNome.toLowerCase())
             });
         },
+        mostraTendina: function(index){
+            this.mostra=!this.mostra;
+        }
         
     }
 },
