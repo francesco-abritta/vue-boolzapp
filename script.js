@@ -151,6 +151,10 @@ let app = new Vue({
         mostraTendina: function(index, chat){
             this.contacts[chat].messages[index].tenda=!this.contacts[chat].messages[index].tenda;
         },
+        elimina: function(index, chat){
+            let app=this.contacts[chat].messages;
+            app.splice(index,1);
+        },
         
     }
 },
