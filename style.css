@@ -193,6 +193,20 @@
 .testo{
     max-width: 400px;
     word-break: break-word;
+    display: inline-block;
+}
+
+.arrow{
+    opacity: 0.4;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    display: inline-block;
+    position: fixed;
+}
+
+.arrow i{
+    display: none;
 }
 
 .sent{
@@ -216,6 +230,11 @@
     min-width: 100px;
     max-width: 500px;
     border-radius: 15px;
+    position: relative;
+}
+
+.messagereceived:hover .arrow i, .messagesent:hover .arrow i{
+    display: inline-block;
 }
 
 .time{
@@ -235,6 +254,7 @@ p{
     left: 50%;
     transform: translate(-50%, -50%);
     color: grey;
+    font-size: 25px;
 }
 
 

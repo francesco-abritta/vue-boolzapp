@@ -83,6 +83,7 @@
                     <div v-for="(messaggio, index) in contacts[chat].messages" v-if="contattoAttivo > 0" :class="messaggio.status">
                         <div :class="'message'+messaggio.status">
                             <div class="testo">{{messaggio.text}}</div>
+                            <div class="arrow"><i class="fas fa-chevron-down"></i></div>
                             <div class="time">{{messaggio.date}}</div>
                         </div>
                     </div>
