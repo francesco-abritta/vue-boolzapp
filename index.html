@@ -83,11 +83,11 @@
                     <div v-for="(messaggio, index) in contacts[chat].messages" v-if="contattoAttivo > 0" :class="messaggio.status">
                         <div :class="'message'+messaggio.status">
                             <div class="testo">{{messaggio.text}}</div>
-                            <div @click="mostraTendina(index)" class="arrow"><i class="fas fa-chevron-down"></i></div>
-                            <div class="tendina" :class="{nascondi: mostra}">
+                            <div @click="mostraTendina(index, chat)" class="arrow"><i class="fas fa-chevron-down"></i></div>
+                            <div class="tendina" :class="{nascondi: messaggio.tenda}">
                                 <ul>
                                     <li>Info messaggio</li>
-                                    <li>Elimina messaggio</li>
+                                    <li @click="elimina(index, chat)">Elimina messaggio</li>
                                 </ul>
                             </div>
                             <div class="time">{{messaggio.date}}</div>
